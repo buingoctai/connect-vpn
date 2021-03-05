@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Auto Connect VPN</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+</head>
+<style>
+    input[type=text], select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    input[type=submit] {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+    
+    div {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+      display: none;
+    }
+    </style>
+<body style="background: white;">
+    <h1>Auto Connect VPN</h1>
+    <p style="color: red;">
+        Đăng nhập một lần dùng mãi mãi
+    </p>
+    <div id='form'>
+       
+          <label for="fname">Host Name</label>
+          <input type="text" id="hostname" name="firstname" value="ovpnc2.vng.com.vn">
+      
+          <label for="lname">User Name</label>
+          <input type="text" id="username" name="lastname" value="" placeholder="Nhập domain">
+      
+          <label for="country">Password</label>
+          <input type="text" id="password" name="lastname" value="">
+
+          <label for="authencation-secret">Authencation secret</label>
+          <input type="text" id="authencation" name="authencationsecret" value="">
+        
+        
+          <input id='submit' type="submit" value="Kết nối vpn">
+      </div>
+      <input id='reset' type="submit" value="Xóa account đang tồn tại">
+      <span id='noti' style="font-style: italic;color: red;">Thông báo:</span>
+      <p style="font-family: Arial, Helvetica, sans-serif;">
+        Làm sao có PASSWORD &  AUTHENTICATOR_SECRET ? </br>
+        - Truy cập https://security.vng.com.vn/token-gateway/token với account vng. </br>
+        - Trong Actions chọn  reset để tạo lại PASSWORD & AUTHENTICATOR_SECRET. </br>
+        - QR Code hiện ra -> Copy dòng code bên dưới và lưu lại. Đó chính là AUTHENTICATOR_SECRET. Ví dụ: WM2M ZNZL GFS4 ZL3W </br>
+        - Quét mã QR Code bằng google authencator. </br>
+        - Set mã pin (Đó là PASSWORD). Chọn 6 số bất kỳ. </br>
+        - Confirm lại mã pin vừa set. </br>
+        - Done. </br>
+      </p>
+      <span id='reset-title'><u>Thay đổi tài khoản:</u> Click <strong>Xóa account đang tồn tại</strong> -> tắt app -> mở lại</span>
+    </br>
+  </br>
+      <span style="color: royalblue;">Taibn - Zalopay 0983053600</span>
+</body>
+</html>
